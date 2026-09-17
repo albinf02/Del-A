@@ -5,5 +5,12 @@ List<int> prices = new List<int>();
 names.Add("Ost");
 prices.Add(89);
 
-Console.WriteLine(names[0]);
-Console.WriteLine(prices[0]);
+int total = 0;
+
+for (int i = 0; i < names.Count; i++)
+{
+    Console.WriteLine($"{i + 1}. {names[i]} - {prices[i]} kr");
+    total += prices[i];
+}
+
+Console.WriteLine($"Totalt: {total} kr");
