@@ -1,9 +1,26 @@
+//innehåller namn och listor
 List<string> names = new List<string>();
 List<int> prices = new List<int>();
-//innehåller namn och listor
 
-names.Add("Ost");
-prices.Add(89);
+
+// frågar användaren att plocka en vara och skriva pris
+Console.Write("Skriv en vara: " );
+string name = Console.ReadLine()!;
+
+Console.Write ("Skriv priset: ");
+string priceInput = Console.ReadLine()!;
+
+// priset är ett heltal
+if (int.TryParse(priceInput, out int price))
+{
+    names.Add(name);
+    prices.Add(price);
+
+}
+else
+{
+    Console.WriteLine("Priset måste vara ett heltal");
+}
 
 int total = 0;
 
@@ -14,15 +31,3 @@ for (int i = 0; i < names.Count; i++)
 }
 
 Console.WriteLine($"Totalt: {total} kr");
-
-
-// frågar användaren att plocka en vara
-Console.Write("Skriv en vara: " );
-string name = Console.ReadLine()!;
-
-if (int.TryParse(priceInput, out int price))
-{
-    names.Add(name);
-    prices.Add(price);
-    
-}
