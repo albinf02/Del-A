@@ -20,3 +20,9 @@ Console.WriteLine($"Totalt: {total} kr");
 Console.Write("Skriv en vara: " );
 string name = Console.ReadLine()!;
 
+if (int.TryParse(priceInput, out int price))
+{
+    names.Add(name);
+    prices.Add(price);
+    
+}
