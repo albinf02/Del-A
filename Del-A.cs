@@ -45,6 +45,12 @@ if (int.TryParse(removeInput, out int number))
         names.RemoveAt(index);
         prices.RemoveAt(index);
     }
+else
+        {
+            Console.WriteLine("Det numret finns inte i listan.");
+        }
+continue; 
+
 }
     
 
