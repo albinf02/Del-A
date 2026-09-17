@@ -2,7 +2,8 @@
 List<string> names = new List<string>();
 List<int> prices = new List<int>();
 
-
+while (true)
+{
 // frågar användaren att plocka en vara och skriva pris
 Console.Write("Skriv en vara: " );
 string name = Console.ReadLine()!;
@@ -31,3 +32,4 @@ for (int i = 0; i < names.Count; i++)
 }
 
 Console.WriteLine($"Totalt: {total} kr");
+}
