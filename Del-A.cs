@@ -14,3 +14,9 @@ for (int i = 0; i < names.Count; i++)
 }
 
 Console.WriteLine($"Totalt: {total} kr");
+
+
+// frågar användaren att plocka en vara
+Console.Write("Skriv en vara: " );
+string name = Console.ReadLine()!;
+
