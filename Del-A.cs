@@ -17,27 +17,7 @@ Console.WriteLine($"Totalt: {total} kr");
 
 Console.Write("Skriv en vara eller numret på en vara att ta bort: ");
 string input = Console.ReadLine()!;
-
-Console.Write ("Skriv priset: ");
-string priceInput = Console.ReadLine()!;
-
-
-// priset är ett heltal
-if (int.TryParse(priceInput, out int price))
-{
-    names.Add(input);
-    prices.Add(price);
-
-}
-else
-{
-    Console.WriteLine("Priset måste vara ett heltal");
-}
-
-Console.Write("Vill du ta bort en vara? Skriv numret eller tryck Enter: ");
-string removeInput = Console.ReadLine()!;
-
-if (int.TryParse(removeInput, out int number))
+if (int.TryParse(input, out int number))
 {
     int index = number - 1;
 
@@ -54,7 +34,21 @@ continue;
 
 
 }
+
+Console.Write ("Skriv priset: ");
+string priceInput = Console.ReadLine()!;
+
+// priset är ett heltal
+if (int.TryParse(priceInput, out int price))
+{
+    names.Add(input);
+    prices.Add(price);
+
+}
+else
+{
+    Console.WriteLine("Priset måste vara ett heltal");
+}
+
     
-
-
 }
