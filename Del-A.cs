@@ -3,7 +3,8 @@ List<string> names = new List<string>();
 List<int> prices = new List<int>();
 
 while (true)
-int total = 0;
+{
+ int total = 0;
 
 for (int i = 0; i < names.Count; i++)
 {
@@ -13,9 +14,9 @@ for (int i = 0; i < names.Count; i++)
 
 Console.WriteLine($"Totalt: {total} kr");
 
-{
-Console.Write("Skriv en vara: ");
-string name = Console.ReadLine()!;
+
+Console.Write("Skriv en vara eller numret på en vara att ta bort: ");
+string input = Console.ReadLine()!;
 
 Console.Write ("Skriv priset: ");
 string priceInput = Console.ReadLine()!;
@@ -24,7 +25,7 @@ string priceInput = Console.ReadLine()!;
 // priset är ett heltal
 if (int.TryParse(priceInput, out int price))
 {
-    names.Add(name);
+    names.Add(input);
     prices.Add(price);
 
 }
@@ -32,8 +33,6 @@ else
 {
     Console.WriteLine("Priset måste vara ett heltal");
 }
-
-
 
 Console.Write("Vill du ta bort en vara? Skriv numret eller tryck Enter: ");
 string removeInput = Console.ReadLine()!;
